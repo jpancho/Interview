@@ -16,11 +16,17 @@ public class FizzBuzz {
      * @param args command line arguments
      */
     public static void main(String[] args) {
+        final String FIZZ = "Fizz";
+        final String BUZZ = "Buzz";
+
         for (int i = 1; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) System.out.println(i + " FizzBuzz");
-            else if (i % 3 == 0) System.out.println(i + " Fizz");
-            else if (i % 5 == 0) System.out.println(i + " Buzz");
-            else System.out.println(i + "");
+            boolean fizz = (i % 3 == 0);
+            boolean buzz = (i % 5 == 0);
+
+            if (fizz && buzz) System.out.println(i + " " + FIZZ + BUZZ);
+            else if (fizz) System.out.println(i + " " + FIZZ);
+            else if (buzz) System.out.println(i + " " + BUZZ);
+            else System.out.println(i);
         }
     }
 }
